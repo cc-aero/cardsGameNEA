@@ -32,8 +32,17 @@ public class Login {
     }
 
     public static int logIn(Login l){
+        //!TODO Make this actually work
         l.setSha1(Passwords.generateHash(l.getPw()));
+        //Compare to DB
+        //If valid;
         t = new Token(l);
+        //Then do a return
+        boolean valid = false;
+        if(valid){
+            return 0;
+        }
+
         return -1;
     }
 
