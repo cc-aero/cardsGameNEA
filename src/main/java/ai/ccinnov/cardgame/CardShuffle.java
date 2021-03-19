@@ -11,12 +11,14 @@ public class CardShuffle {
         //System.out.println(login.getSha1());
         Token newToken = new Token(login);
         newToken.generateToken();
+        //This shuffling algo is highly randomised, and provides near perfect shuffles
+        //as epoch count increases.
+        //This is known as the "Fisher-Yates" solution for near perfect card shuffling
         String[] cards = {
                 "1","2","3","4","5","6","7","8","9","10",
                 "11","12","13","14","15","16","17","18","19","20",
                 "21","22","23","24","25","26","27","28","29","30"};
         int shuffleFactor = 50000;
-//        String[] newCards = swapAt(cards,4,18);
         int length = cards.length;
         for(int i = 0; i<shuffleFactor;i++){
             int ranPos = ThreadLocalRandom.current().nextInt(0,length);
