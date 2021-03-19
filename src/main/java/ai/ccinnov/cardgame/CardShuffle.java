@@ -18,12 +18,15 @@ public class CardShuffle {
                 "1","2","3","4","5","6","7","8","9","10",
                 "11","12","13","14","15","16","17","18","19","20",
                 "21","22","23","24","25","26","27","28","29","30"};
+        String[] colours = {"0","1","2"}; //!TODO Sort out card setup (Probably use chars or ints for efficiency)
         int shuffleFactor = 50000;
         int length = cards.length;
         for(int i = 0; i<shuffleFactor;i++){
             int ranPos = ThreadLocalRandom.current().nextInt(0,length);
             cards = swapAt(cards, 2,ranPos);
         }
+
+        //For testing purposes
         for(int j = 0; j<length;j++){
             System.out.print(cards[j]+", ");
         }
