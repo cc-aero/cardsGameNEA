@@ -9,30 +9,30 @@ public class PasswordTests {
     @Test
     @DisplayName("Valid Password")
     void validPw(){
-        Assertions.assertEquals(true,Passwords.validatePassword("123456A7#"));
+        Assertions.assertTrue(Passwords.validatePassword("123456A7#"));
     }
 
     @Test
     @DisplayName("Invalid Password No Caps")
     void noCapsPw(){
-        Assertions.assertEquals(false,Passwords.validatePassword("nocap1talshere!"));
+        Assertions.assertFalse(Passwords.validatePassword("nocap1talshere!"));
     }
 
     @Test
     @DisplayName("Invalid Password No Number")
     void noNumberPw(){
-        Assertions.assertEquals(false,Passwords.validatePassword("noNumbersHere!"));
+        Assertions.assertFalse(Passwords.validatePassword("noNumbersHere!"));
     }
 
     @Test
     @DisplayName("Invalid Password No Special Chars")
     void noSpecialCharPw(){
-        Assertions.assertEquals(false,Passwords.validatePassword("noSpecialCh4rs"));
+        Assertions.assertFalse(Passwords.validatePassword("noSpecialCh4rs"));
     }
 
     @Test
     @DisplayName("Invalid Password Too Short")
     void badLengthPw(){
-        Assertions.assertEquals(false,Passwords.validatePassword("tooshor"));
+        Assertions.assertFalse(Passwords.validatePassword("tooshor"));
     }
 }
