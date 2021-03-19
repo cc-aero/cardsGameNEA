@@ -4,6 +4,7 @@ public class Login {
     private String un;
     private String pw;
     private String sha1;
+    private static Token t;
     public Login(String un, String pw){
         this.un = un;
         this.pw = pw;
@@ -32,6 +33,7 @@ public class Login {
 
     public static int logIn(Login l){
         l.setSha1(Passwords.generateHash(l.getPw()));
+        t = new Token(l);
         return -1;
     }
 

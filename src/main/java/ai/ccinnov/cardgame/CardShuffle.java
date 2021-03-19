@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class CardShuffle {
     public static void main(String[] args) {
         Login login = new Login("user123","mypassworD#2");
-        System.out.println(login.getSha1());
+        //System.out.println(login.getSha1());
         Token newToken = new Token(login);
         newToken.generateToken();
         String[] cards = {
@@ -25,7 +25,6 @@ public class CardShuffle {
         for(int j = 0; j<length;j++){
             System.out.print(cards[j]+", ");
         }
-        System.out.println(DigestUtils.sha1Hex("testigwgegweng 123"));
     }
 
     public static String[] swapAt(String[] cards, int a, int b){

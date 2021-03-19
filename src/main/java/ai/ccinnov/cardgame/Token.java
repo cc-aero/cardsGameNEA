@@ -14,11 +14,11 @@ public class Token {
         char parity = '1';
         String rubbishToken = (l.getUn()+"xx"+l.getSha1()+"xx"+(System.currentTimeMillis())+parity);
         System.out.print("Access token: "+rubbishToken+"\n");
-        tokensList+= ["e"];
+        //tokensList+= ["e"];
         return 0;
     }
 
-    public static int revokeToken(Token t){
-
-    }
+//    public static int revokeToken(Token t){
+//
+//    }
 }
