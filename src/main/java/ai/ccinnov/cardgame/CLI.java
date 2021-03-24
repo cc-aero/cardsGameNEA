@@ -13,7 +13,8 @@ public class CLI {
             userName = scanner.nextLine();
 
             System.out.print("Enter your Password: ");
-
+            Login l = new Login(userName,scanner.nextLine());
+            Login.logIn(l);
         }
     }
 }

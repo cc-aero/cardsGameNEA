@@ -19,8 +19,8 @@ public class CardShuffle {
                 "11","12","13","14","15","16","17","18","19","20",
                 "21","22","23","24","25","26","27","28","29","30"};
         String[] colours = {"0","1","2"}; //!TODO Sort out card setup (Probably use chars or ints for efficiency)
-        int shuffleFactor = 50000;
-        int length = cards.length;
+        int shuffleFactor = 50000; //!TODO Work out the maths for efficient random sort
+        int length = cards.length; //For time-saving purposes as we don't want to call the same method twice
         for(int i = 0; i<shuffleFactor;i++){
             int ranPos = ThreadLocalRandom.current().nextInt(0,length);
             cards = swapAt(cards, 2,ranPos);

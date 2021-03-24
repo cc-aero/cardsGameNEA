@@ -36,6 +36,8 @@ public class Login {
         l.setSha1(Passwords.generateHash(l.getPw()));
         //Compare to DB
         //If valid;
+
+        //Generate token
         t = new Token(l);
         //Then do a return
         boolean valid = false;
